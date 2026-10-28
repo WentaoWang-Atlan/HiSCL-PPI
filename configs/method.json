@@ -1,0 +1,28 @@
+{
+  "S": 50,
+  "batch_size_proteins": 128,
+  "view": {
+    "mask_ratio": 0.15,
+    "block_w": 10,
+    "strategy": [
+      "iid",
+      "block"
+    ]
+  },
+  "taus": {
+    "R": 0.5,
+    "S": 0.3,
+    "P": 0.1
+  },
+  "lambdas": {
+    "R": 1.0,
+    "S": 1.0,
+    "P": 1.0
+  },
+  "lambda_hcl": 1.0,
+  "lambda_tm": 0.3,
+  "tau_tm": 0.1,
+  "t_min": 0.5,
+  "r_cap": 12000,
+  "tau_t": 0.1
+}

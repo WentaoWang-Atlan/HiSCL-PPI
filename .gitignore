@@ -1,0 +1,52 @@
+# External datasets, structure snapshots, and generated experiment artifacts.
+/data/
+/structures/
+/raw_data/
+/processed_data/
+/runs/
+/results/
+/logs/
+/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.pdb
+*.cif
+*.m8
+*.log
+*.zip
+*.tar
+*.tar.gz
+
+# Local Python environments and tooling caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Local editor settings, credentials, and operating-system files.
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+
+# Author citation metadata is deferred until anonymous review ends.
+/CITATION.cff
+/CITATION.bib

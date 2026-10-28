@@ -1,0 +1,15 @@
+name: hiscl_ppi
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - --find-links https://data.dgl.ai/wheels/cu121/repo.html
+      - torch==2.1.2+cu121
+      - dgl==1.1.3+cu121
+      - numpy==1.24.4
+      - scipy==1.13.1
+      - tqdm==4.70.0
