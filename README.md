@@ -65,13 +65,16 @@ virtual environment:
 ```bash
 python -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
 pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cpu
-pip install dgl==1.1.3 numpy==1.24.4 scipy==1.13.1 tqdm==4.70.0
+pip install dgl==1.1.3 numpy==1.24.4 scipy==1.13.1 tqdm==4.70.0 packaging==24.2
 bash scripts/test.sh
 ```
 
 The test command uses CPU synthetic graphs, temporary TM matrices, and short
 training runs for all four paper variants; it does not require benchmark data.
+`packaging` is an explicit runtime dependency of DGL 1.1.3's import path; do not
+rely on the obsolete `setuptools.extern.packaging` fallback in a clean environment.
 GPU kernels can remain nondeterministic with a fixed seed. The environment used
 for release validation differs from some historical paper runs, so exact
 floating-point reproduction also depends on the original software and inputs.
